@@ -31,8 +31,8 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
-import FontBackgroundColor from "@ckeditor/ckeditor5-font/src/fontbackgroundcolor";
-import Underline from "@ckeditor/ckeditor5-basic-styles/src/underline";
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
