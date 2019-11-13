@@ -28,6 +28,9 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -36,6 +39,9 @@ ClassicEditor.builtinPlugins = [
 	Essentials,
 	UploadAdapter,
 	Autoformat,
+	Alignment,
+	Strikethrough,
+	FontColor,
 	Bold,
 	Italic,
 	BlockQuote,
@@ -66,16 +72,12 @@ ClassicEditor.defaultConfig = {
 			'bold',
 			'italic',
 			'link',
+			'strikethrough',
+			'fontcolor',
+			'alignment',
 			'bulletedList',
 			'numberedList',
-			'|',
-			'indent',
-			'outdent',
-			'|',
 			'imageUpload',
-			'blockQuote',
-			'insertTable',
-			'mediaEmbed',
 			'undo',
 			'redo'
 		]
@@ -88,13 +90,11 @@ ClassicEditor.defaultConfig = {
 			'imageTextAlternative'
 		]
 	},
-	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells'
-		]
+	fontColor: {
+		columns: 8,
+		documentColors: 24
 	},
+	alignment: [ 'left', 'center', 'right' ],
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'ru'
 };
